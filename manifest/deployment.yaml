@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: gcr.io/k8s-sent-deployment/imagem-do-projeto
+        image: gcr.io/argon-triode-335914/imagem-do-projeto
         ports:
         - containerPort: 5000
         
