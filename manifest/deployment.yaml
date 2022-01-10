@@ -16,5 +16,5 @@ spec:
       - name: app
         image: gcr.io/argon-triode-335914/imagem-do-projeto
         ports:
-        - containerPort: 5000
+        - containerPort: 80
         
