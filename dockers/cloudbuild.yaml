@@ -1,7 +1,7 @@
 steps:
   # build the container image
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-central1-c-docker.pkg.dev/argon-triode-335914/quickstart-docker-repo/quickstart-image:tag1', '.' ]
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build", "-t", "gcr.io/argon-triode-335914/imagem-do-projeto:tag", "."]
   # push container image
 - name: "gcr.io/cloud-builders/docker"
   args: ["push", "gcr.io/argon-triode-335914/imagem-do-projeto:tag"]
@@ -13,8 +13,3 @@ steps:
   - --image=gcr.io/argon-triode-335914/imagem-do-projeto:tag
   - --location=us-central1-c
   - --cluster=quickstart-cluster-project-nuvem-cluster
-
-
-
-# - name: "gcr.io/cloud-builders/docker"
-#   args: ["build", "-t", "gcr.io/argon-triode-335914/imagem-do-projeto:tag", "."]
