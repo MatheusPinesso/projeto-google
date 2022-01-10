@@ -9,7 +9,7 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename=kubernetes-resource-file
+  - --filename=/manifest
   - --image=gcr.io/argon-triode-335914/imagem-do-projeto:tag
   - --location=us-central1-c
   - --cluster=quickstart-cluster-project-nuvem-cluster
