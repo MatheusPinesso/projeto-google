@@ -1,4 +1,4 @@
-FROM node:14-buster as angular
+FROM node:14 as angular
 
 WORKDIR /app
 
@@ -8,4 +8,5 @@ RUN npm i
 
 COPY . .
 
-RUN npm run build:prod
+RUN npm run build
+
