@@ -1,4 +1,4 @@
-FROM node:14-buster as angular
+FROM node:alpine as angular
 WORKDIR /app
 COPY package.json /app/
 RUN npm i
@@ -8,5 +8,6 @@ RUN npm run build
 
 FROM nginx:alpine as nginx
 VOLUME /var/cache/nginx
-COPY --from=angular /app/ /usr/share/nginx/html
+COPY --from=angular app/dist/projeto-google /usr/share/nginx/html
 COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
+
