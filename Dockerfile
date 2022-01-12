@@ -8,5 +8,5 @@ RUN npm run build:prod
 
 FROM nginx:stable-alpine as nginx
 VOLUME /var/cache/nginx
-COPY --from=angular app/ /usr/share/nginx/html
+COPY --from=angular src/app/ /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
