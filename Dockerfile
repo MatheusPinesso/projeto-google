@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json /app/
 RUN npm i
 COPY . .
-RUN npm run build
+RUN npm run build:prod
 
 
 FROM nginx:alpine as nginx
